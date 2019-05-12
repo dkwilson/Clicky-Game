@@ -24,14 +24,6 @@ export default function App() {
 
     const handleClick = (id) => {
         setDisabled(true)
-        if (flipped.length === 0) {
-            setFlipped([id])
-            setDisabled(false)
-        } else {
-            if (sameCardClicked(id)) return
-            setFlipped([...flipped[0], id])
-        }
-        setFlipped([...flipped, id])
     }
 
     const sameCardClicked = (id) => flipped.includes(id)
